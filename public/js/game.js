@@ -42,9 +42,9 @@ function create() {
   });
 
   this.socket.on('starLocation', function (starLocation) {
-    if (self.star) self.star.destroy();
     self.star = self.physics.add.image(starLocation.x, starLocation.y, 'star');
     self.physics.add.overlap(self.ship, self.star, function () {
+      self.star.destroy();
       this.socket.emit('starCollected');
     }, null, self);
   });
