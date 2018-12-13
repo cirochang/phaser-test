@@ -31,6 +31,7 @@ function create() {
   this.otherPlayers = this.physics.add.group();
 
   this.cursors = this.input.keyboard.createCursorKeys();
+  this.blueScoreText = this.add.text(284, 16, 'Criado por Ciro Chang rs', { fontSize: '16px'});
 
   this.blueScoreText = this.add.text(16, 16, '', { fontSize: '32px', fill: '#0000FF' });
   this.redScoreText = this.add.text(584, 16, '', { fontSize: '32px', fill: '#FF0000' });
@@ -111,8 +112,11 @@ function update() {
       y: this.ship.y,
       rotation: this.ship.rotation
     };
+    this.physics.world.wrap(this.ship, 5);
+
+    //console.log(this.ship.world.wrap(this.ship, 5));
   
-    //this.physics.world.wrap(this.ship, 5);
+    // sthis.physics.world.wrap(this.ship, 5);
   }
 }
 
