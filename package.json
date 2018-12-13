@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/cirochang/phaser-test/issues"
   },
-  "homepage": "https://github.com/cirochang/phaser-test#readme"
+  "homepage": "https://github.com/cirochang/phaser-test#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "socket.io": "^2.2.0"
+  }
 }
